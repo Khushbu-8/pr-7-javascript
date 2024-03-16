@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personDetail</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(name,age,country){
+                this.name = name;
+                this.age = age;
+                this.country = country;
+                
+
+            }
+            Detail(){
+                console.log(`Name is :${this.name}`);
+                console.log(`Age is :${this.age}`);
+                console.log(`Country is :${this.country}`);
+
+            }
+        }
+
+      
+        let no = parseInt(prompt("Enter number of the students :"));
+
+for(var i=1; i<=no; i++){
+    var name = prompt("Enter name :");
+    var age = parseInt(prompt("Enter age :"));
+    var country = prompt("Enter Country :");
+    var personD = new person(name,age,country);
+    personD.Detail();
+}
+
+      
+
+
+    </script>
+</body>
+</html>

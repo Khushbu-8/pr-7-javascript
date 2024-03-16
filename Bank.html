@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <script>
+        class bank{
+
+            constructor(accono,pass,name,balance){
+                this.accono = accono;
+                this.pass =pass;
+                this.name = name; 
+                this.balance = balance;
+
+            }
+            Withdrow(amtW){
+                let id = parseInt(prompt("Enter Your Account no :"));
+                let password = prompt("Enter Your password :");
+                console.log(`Name : ${this.name}`);
+                console.log(`Balance : ${this.balance}`);
+                console.log(`Withdraw : ${amtW}`);
+
+                if(this.accono == id && this.pass == password){
+                    if(this.balance >amtW){
+                        this.balance = this.balance - amtW;
+                       
+                        console.log(`Account Balance : ${this.balance}`);
+                        console.log(`Thank You...`);
+
+                    }else{
+                        console.log(`InSufficient balance...`)
+
+                    }
+
+
+                }else{
+                    console.log(`Your accountno and  Password is Invalid..`)
+
+                }
+
+            }
+            Diposite(amtD){
+                  let id = parseInt(prompt("Enter Your Account no :"));
+                let password = prompt("Enter Your password :");
+                console.log(`Name : ${this.name}`);
+                console.log(`Balance : ${this.balance}`);
+                console.log(`Deposited : ${amtD}`);
+
+                if(this.accono == id && this.pass == password){
+                   
+                        this.balance = this.balance + amtD;
+                       
+                        console.log(`Account Balance : ${this.balance}`);
+                        console.log(`Thank You...`);
+
+                }else{
+                    console.log(`Your accountno and  Password is Invalid..`)
+
+                }
+
+
+            }
+        
+        }
+        obj= new bank(111,"1212","Khushbu",10000);
+       
+        amtD = parseInt(prompt("Enter Deposit Amount :"));
+       
+        obj.Diposite(amtD);
+        amtW = parseInt(prompt("Enter Withdrow Amount :")); 
+       
+        obj.Withdrow(amtW);
+
+    </script>
+</body>
+</html>
